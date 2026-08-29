@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -6,12 +7,15 @@ function App() {
       <Navbar />
 
       <main>
+        <Hero />
+
         <section id="about" className="section">
           <div className="container">
             <p className="section-label">About</p>
-            <h1 className="section-title">
-              Karthik Yannabathina
-            </h1>
+
+            <h2 className="section-title">
+              About me
+            </h2>
           </div>
         </section>
       </main>
