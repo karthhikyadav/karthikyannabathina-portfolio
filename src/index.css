@@ -535,3 +535,138 @@ ol {
     padding: 24px;
   }
 }
+.projects {
+  border-top: 1px solid var(--border);
+}
+
+.projects__header {
+  margin-bottom: 72px;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  padding: 48px;
+
+  background: var(--background);
+
+  transition: background var(--transition);
+}
+
+.project-card:hover {
+  background: var(--surface);
+}
+
+.project-card__number {
+  color: var(--text-muted);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-card__content {
+  max-width: 900px;
+}
+
+.project-card__category {
+  color: var(--text-muted);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  margin-top: 12px;
+
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.project-card__description {
+  max-width: 700px;
+  margin-top: 24px;
+
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+}
+
+.project-card__technologies,
+.project-card__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.project-card__technologies span {
+  padding: 7px 11px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  color: var(--text-primary);
+
+  font-size: 0.75rem;
+}
+
+.project-card__highlights span {
+  color: var(--text-muted);
+
+  font-size: 0.8rem;
+}
+
+.project-card__highlights span::before {
+  content: "→";
+  margin-right: 8px;
+
+  color: var(--text-muted);
+}
+
+.project-card__links {
+  display: flex;
+  gap: 24px;
+
+  margin-top: 36px;
+}
+
+.project-card__links a {
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid var(--text-primary);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .projects__header {
+    margin-bottom: 48px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    padding: 28px 24px;
+  }
+
+  .project-card__title {
+    font-size: 2.5rem;
+  }
+}
