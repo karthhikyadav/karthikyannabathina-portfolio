@@ -30,6 +30,14 @@ function Hero() {
           >
             GitHub ↗
           </a>
+
+          <a
+  href="https://www.linkedin.com/in/karthik-yannabathina/"
+  target="_blank"
+  rel="noreferrer"
+>
+  LinkedIn ↗
+</a>
         </div>
 
         <div className="hero__stack">
