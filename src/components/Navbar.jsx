@@ -12,6 +12,7 @@ function Navbar() {
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
+          <a href="#problem-solving">Problem Solving</a>
         </nav>
 
         <a href="#contact" className="navbar__cta">
