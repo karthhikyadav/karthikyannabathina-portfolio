@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import ProblemSolving from "./components/ProblemSolving";
 import Learning from "./components/Learning";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Education />
         <ProblemSolving />
         <Learning />
+        <Contact />
       </main>
     </>
   );
