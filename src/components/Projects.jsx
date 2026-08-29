@@ -1,3 +1,4 @@
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import projects from "../data/projects";
 
 function Projects() {
@@ -8,8 +9,15 @@ function Projects() {
   return (
     <section id="projects" className="section projects">
       <div className="container">
+
+        {/* ================================
+            HEADER
+        ================================= */}
+
         <div className="projects__header">
-          <p className="section-label">03 — Selected Work</p>
+          <p className="section-label">
+            03 — Selected Work
+          </p>
 
           <h2 className="section-title">
             Projects I've
@@ -24,72 +32,143 @@ function Projects() {
           </p>
         </div>
 
+
+        {/* ================================
+            PROJECT GRID
+        ================================= */}
+
         <div className="projects__list">
+
           {featuredProjects.map((project, index) => (
             <article
-  className={`project-card ${
-    project.id === "tradex" ? "project-card--featured" : ""
-  }`}
-  key={project.id}
->
-              <div className="project-card__number">
-                0{index + 1}
-              </div>
+              className="project-card"
+              key={project.id}
+            >
+
+              {/* ================================
+                  PROJECT IMAGE
+              ================================= */}
+
+              {project.image && (
+                <div className="project-card__image">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    loading="lazy"
+                  />
+                </div>
+              )}
+
+
+              {/* ================================
+                  PROJECT CONTENT
+              ================================= */}
 
               <div className="project-card__content">
+
+                {/* Number */}
+
+                <div className="project-card__number">
+                  0{index + 1}
+                </div>
+
+
+                {/* Category */}
+
                 <p className="project-card__category">
                   {project.category}
                 </p>
+
+
+                {/* Title */}
 
                 <h3 className="project-card__title">
                   {project.title}
                 </h3>
 
+
+                {/* Description */}
+
                 <p className="project-card__description">
                   {project.description}
                 </p>
 
+
+                {/* Technologies */}
+
                 <div className="project-card__technologies">
                   {project.technologies.map((technology) => (
                     <span key={technology}>
-                      {technology}
+                      #{technology}
                     </span>
                   ))}
                 </div>
 
-                <div className="project-card__highlights">
-                  {project.highlights.map((highlight) => (
-                    <span key={highlight}>
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
 
-                <div className="project-card__links">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub ↗
-                    </a>
-                  )}
+                {/* Highlights */}
 
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Live Demo ↗
-                    </a>
-                  )}
-                </div>
+                {project.highlights?.length > 0 && (
+                  <div className="project-card__highlights">
+                    {project.highlights.map((highlight) => (
+                      <span key={highlight}>
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
               </div>
+
+
+              {/* ================================
+                  PROJECT BUTTONS
+              ================================= */}
+
+              <div className="project-card__links">
+
+                {/* LEFT — LIVE PROJECT */}
+
+                {project.live ? (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-card__link project-card__link--live"
+                  >
+                    <span>Live Project</span>
+                    <FiExternalLink />
+                  </a>
+                ) : (
+                  <span
+                    className="project-card__link project-card__link--live project-card__link--disabled"
+                  >
+                    <span>Live Project</span>
+                    <FiExternalLink />
+                  </span>
+                )}
+
+
+                {/* RIGHT — GITHUB */}
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-card__link project-card__link--github"
+                  >
+                    <span>GitHub</span>
+                    <FiGithub />
+                  </a>
+                )}
+
+              </div>
+
             </article>
           ))}
+
         </div>
+
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+
+
 const projects = [
   {
     id: "tradex",
@@ -76,6 +78,8 @@ const projects = [
     title: "Tiffin Shop",
     category: "Frontend · Food Ordering",
 
+    image: "/tiffens-shopp.png",
+
     description:
       "A responsive food ordering platform built for a local tiffin business with menu browsing, cart functionality, checkout flow, and WhatsApp ordering.",
 
@@ -98,7 +102,7 @@ const projects = [
     github:
       "https://github.com/karthhikyadav/tiffensshop-website",
 
-    live: "",
+    live: "https://tiffensshop-website.vercel.app/",
   },
 
   {

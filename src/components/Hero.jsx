@@ -12,7 +12,7 @@ function Hero() {
         </h1>
 
         <p className="hero__description">
-          I'm Karthik Yannabathina, a Full Stack Developer focused on
+          <h1>Hey, I'm Karthik Yannabathina</h1>a Full Stack Developer focused on
           building scalable and reliable applications with React,
           Node.js, and modern backend technologies.
         </p>
