@@ -670,3 +670,26 @@ ol {
     font-size: 2.5rem;
   }
 }
+.project-card__number {
+  position: sticky;
+  top: 120px;
+
+  align-self: start;
+
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.project-card--featured {
+  padding-block: 72px;
+}
+
+.project-card--featured .project-card__title {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+}
+
+.project-card--featured .project-card__description {
+  font-size: 1.05rem;
+}

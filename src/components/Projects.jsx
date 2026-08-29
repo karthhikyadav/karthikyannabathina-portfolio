@@ -26,7 +26,12 @@ function Projects() {
 
         <div className="projects__list">
           {featuredProjects.map((project, index) => (
-            <article className="project-card" key={project.id}>
+            <article
+  className={`project-card ${
+    project.id === "tradex" ? "project-card--featured" : ""
+  }`}
+  key={project.id}
+>
               <div className="project-card__number">
                 0{index + 1}
               </div>
