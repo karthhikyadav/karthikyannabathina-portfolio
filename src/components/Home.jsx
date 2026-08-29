@@ -14,7 +14,7 @@ function About() {
         <div className="about__content">
           <div className="about__intro">
             <p>
-              I'm Karthik Yannabathina, a Computer Science student and
+              <h1></h1>I'm Karthik Yannabathina a Computer Science student and
               Full Stack Developer interested in building reliable,
               scalable, and user-focused web applications.
             </p>

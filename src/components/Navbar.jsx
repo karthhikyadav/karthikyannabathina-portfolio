@@ -1,24 +1,78 @@
 function Navbar() {
   return (
     <header className="navbar">
+
       <div className="container navbar__inner">
-        <a href="/" className="navbar__logo">
-          KY
+
+        {/* LOGO */}
+
+        <a
+          href="/"
+          className="navbar__brand"
+        >
+          <span className="navbar__brand-icon">
+            &lt;/&gt;
+          </span>
+
+          <span className="navbar__brand-name">
+            Karthik
+          </span>
         </a>
+
+
+        {/* NAVIGATION */}
 
         <nav className="navbar__links">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-          <a href="#problem-solving">Problem Solving</a>
+
+          <a href="#about">
+            About
+          </a>
+
+          <a href="#experience">
+            Experience
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+          <a href="#skills">
+            Skills
+          </a>
+
+          <a href="#contact">
+            Contact
+            <span className="navbar__external">
+              ↗
+            </span>
+          </a>
+
         </nav>
 
-        <a href="#contact" className="navbar__cta">
-          Let's Talk
-        </a>
+
+        {/* RIGHT */}
+
+        <div className="navbar__right">
+
+          <button
+            className="navbar__theme"
+            aria-label="Toggle theme"
+          >
+            ☼
+          </button>
+
+          <a
+            href="#contact"
+            className="navbar__cta"
+          >
+            Resume
+            <span>↓</span>
+          </a>
+
+        </div>
+
       </div>
+
     </header>
   );
 }
