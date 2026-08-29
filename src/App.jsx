@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
@@ -8,16 +9,7 @@ function App() {
 
       <main>
         <Hero />
-
-        <section id="about" className="section">
-          <div className="container">
-            <p className="section-label">About</p>
-
-            <h2 className="section-title">
-              About me
-            </h2>
-          </div>
-        </section>
+        <About />
       </main>
     </>
   );
