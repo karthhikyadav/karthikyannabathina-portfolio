@@ -38,7 +38,7 @@ function Education() {
               a strong interest in software development. Developing
               practical experience in full-stack web development,
               backend engineering, databases, data structures &
-              algorithms, and modern software development practices.
+              algorithms and modern software development practices.
             </p>
 
             <div className="education-card__tags">
